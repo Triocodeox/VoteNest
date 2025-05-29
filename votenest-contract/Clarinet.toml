@@ -5,6 +5,8 @@ authors = []
 telemetry = true
 cache_dir = '.\.cache'
 requirements = []
+[contracts.secure-voting]
+path = 'contracts/secure-voting.clar'
 [contracts.token-weighted-voting]
 path = 'contracts/token-weighted-voting.clar'
 path = 'contracts/poll-creation_clar.clar'
