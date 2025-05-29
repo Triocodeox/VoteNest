@@ -5,13 +5,25 @@ authors = []
 telemetry = true
 cache_dir = '.\.cache'
 requirements = []
-[contracts.secure-voting]
-path = 'contracts/secure-voting.clar'
-[contracts.token-weighted-voting]
-path = 'contracts/token-weighted-voting.clar'
+[contracts.Vote-counting]
+path = 'contracts/Vote-counting.clar'
+clarity_version = 3
+epoch = 3.0
+
+[contracts.poll-creation]
 path = 'contracts/poll-creation_clar.clar'
 clarity_version = 3
 epoch = 3.0
+
+[contracts.secure-voting]
+path = 'contracts/secure-voting.clar'
+clarity_version = 1
+epoch = 2.05
+
+[contracts.token-weighted-voting]
+path = 'contracts/token-weighted-voting.clar'
+clarity_version = 1
+epoch = 2.05
 [repl.analysis]
 passes = ['check_checker']
 
