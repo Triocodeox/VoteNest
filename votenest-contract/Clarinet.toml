@@ -7,6 +7,7 @@ cache_dir = '.\.cache'
 requirements = []
 [contracts.token-weighted-voting]
 path = 'contracts/token-weighted-voting.clar'
+path = 'contracts/poll-creation_clar.clar'
 clarity_version = 3
 epoch = 3.0
 [repl.analysis]
