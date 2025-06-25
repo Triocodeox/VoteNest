@@ -10,6 +10,11 @@ path = 'contracts/Vote-counting.clar'
 clarity_version = 3
 epoch = 3.0
 
+[contracts.admin-role]
+path = 'contracts/admin-role.clar'
+clarity_version = 3
+epoch = 3.0
+
 [contracts.poll-creation]
 path = 'contracts/poll-creation_clar.clar'
 clarity_version = 3
