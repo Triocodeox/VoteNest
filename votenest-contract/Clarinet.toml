@@ -29,6 +29,11 @@ epoch = 2.05
 path = 'contracts/token-weighted-voting.clar'
 clarity_version = 1
 epoch = 2.05
+
+[contracts.voter-eligibility]
+path = 'contracts/voter-eligibility.clar'
+clarity_version = 3
+epoch = 3.0
 [repl.analysis]
 passes = ['check_checker']
 
