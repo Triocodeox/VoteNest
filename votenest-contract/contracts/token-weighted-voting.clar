@@ -70,8 +70,8 @@
 (define-public (create-proposal (title (string-utf8 100)) (description (string-utf8 500)) (duration uint))
   (let
     ((proposal-id (var-get proposal-count))
-     (start-block stacks-block-height)
-     (end-block (+ stacks-block-height duration)))
+     (start-block block-height)
+     (end-block (+ block-height duration)))
     
     ;; Only contract owner can create proposals
     (asserts! (is-eq tx-sender CONTRACT-OWNER) ERR-NOT-AUTHORIZED)

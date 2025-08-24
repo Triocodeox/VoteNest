@@ -101,7 +101,7 @@
     (asserts! (is-contract-owner) ERR-UNAUTHORIZED)
     (asserts! (is-eq (var-get voting-state) "setup") ERR-WRONG-STATE)
     (asserts! (> (len options) u0) ERR-INVALID-PARAMS)
-    (asserts! (>= start stacks-block-height) ERR-INVALID-PARAMS)
+    (asserts! (>= start block-height) ERR-INVALID-PARAMS)
     (asserts! (> voting-duration u0) ERR-INVALID-PARAMS)
     (asserts! (> reveal-duration u0) ERR-INVALID-PARAMS)
     (asserts! (> min-votes u0) ERR-INVALID-PARAMS)
@@ -151,15 +151,15 @@
     (asserts! (is-eq (var-get voting-state) "voting") ERR-WRONG-STATE)
     (asserts! (is-registered-voter tx-sender) ERR-NOT-REGISTERED)
     (asserts! (not (has-voted tx-sender)) ERR-ALREADY-VOTED)
-    (asserts! (and (>= stacks-block-height (var-get start-block)) 
-                  (<= stacks-block-height (var-get end-block))) 
+    (asserts! (and (>= block-height (var-get start-block)) 
+                  (<= block-height (var-get end-block))) 
               ERR-OUTSIDE-TIMEFRAME)
     
     (map-set vote-registry 
       {voter: tx-sender} 
       {
         vote-hash: vote-hash,
-        vote-cast-block: stacks-block-height,
+        vote-cast-block: block-height,
         revealed: false,
         revealed-option: none,
         valid: none
@@ -269,7 +269,7 @@
     start-block: (var-get start-block),
     end-block: (var-get end-block),
     reveal-end-block: (var-get reveal-end-block),
-    current-block: stacks-block-height,
+    current-block: block-height,
     voter-count: (var-get voter-count),
     revealed-count: (var-get revealed-count),
     verified-count: (var-get verified-count),
