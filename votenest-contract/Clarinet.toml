@@ -1,46 +1,19 @@
 [project]
-name = 'votenest-contract'
-description = ''
+name = "votenest-contract"
 authors = []
+description = ""
 telemetry = true
-cache_dir = '.\.cache'
 requirements = []
-[contracts.Vote-counting]
-path = 'contracts/Vote-counting.clar'
-clarity_version = 3
-epoch = 3.0
+[contracts.proposal-managemnet]
+path = "contracts/proposal-managemnet.clar"
+depends_on = []
 
-[contracts.admin-role]
-path = 'contracts/admin-role.clar'
-clarity_version = 3
-epoch = 3.0
+[repl]
+costs_version = 2
+parser_version = 2
 
-[contracts.poll-creation]
-path = 'contracts/poll-creation_clar.clar'
-clarity_version = 3
-epoch = 3.0
-
-[contracts.secure-voting]
-path = 'contracts/secure-voting.clar'
-clarity_version = 1
-epoch = 2.05
-
-[contracts.token-weighted-voting]
-path = 'contracts/token-weighted-voting.clar'
-clarity_version = 1
-epoch = 2.05
-
-[contracts.vote-tally]
-path = 'contracts/vote-tally.clar'
-clarity_version = 3
-epoch = 3.0
-
-[contracts.voter-eligibility]
-path = 'contracts/voter-eligibility.clar'
-clarity_version = 3
-epoch = 3.0
 [repl.analysis]
-passes = ['check_checker']
+passes = ["check_checker"]
 
 [repl.analysis.check_checker]
 strict = false
